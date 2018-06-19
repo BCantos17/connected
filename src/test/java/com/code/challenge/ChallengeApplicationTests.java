@@ -1,6 +1,7 @@
 package com.code.challenge;
 
 import com.code.challenge.controller.ConnectedController;
+import com.code.challenge.service.ConnectedService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +16,13 @@ public class ChallengeApplicationTests {
 
 	@Autowired
 	private ConnectedController controller;
+	@Autowired
+	private ConnectedService service;
 
 	@Test
 	public void contextLoads() {
 		assertThat(controller).isNotNull();
-	}
-
-	@Test
-	public void main() {
-		ChallengeApplication.main(new String[] {});
+		assertThat(service).isNotNull();
 	}
 
 }
