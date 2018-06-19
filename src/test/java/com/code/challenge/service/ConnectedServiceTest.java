@@ -18,9 +18,16 @@ public class ConnectedServiceTest {
     private ConnectedService service;
 
     @Test
-    public void isConnectedTest(){
+    public void initTest(){
+        service.init();
+    }
+
+    @Test
+    public void isConnectedTestTrue(){
         boolean firstResult = service.isConnected("New York", "Newark");
         boolean secondResult = service.isConnected("New York", "Albany");
+
+        assertThat(service).isInstanceOf(ConnectedService.class);
         assertThat(firstResult).isTrue();
         assertThat(secondResult).isFalse();
     }

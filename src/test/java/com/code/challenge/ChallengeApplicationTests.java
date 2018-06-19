@@ -21,4 +21,9 @@ public class ChallengeApplicationTests {
 		assertThat(controller).isNotNull();
 	}
 
+	@Test
+	public void main() {
+		ChallengeApplication.main(new String[] {});
+	}
+
 }

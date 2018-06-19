@@ -20,7 +20,7 @@ public class ConnectedController {
 
     @GetMapping
     public ResponseEntity<Boolean> isConnected(@RequestParam(value = "origin") String firstCity,
-                                                   @RequestParam(value = "destination") String secondCity) {
+                                               @RequestParam(value = "destination") String secondCity) {
         return new ResponseEntity(service.isConnected(firstCity, secondCity), HttpStatus.OK);
     }
 
